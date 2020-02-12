@@ -7,19 +7,16 @@ import br.com.a5.bean.PessoaBean;
 
 public class PessoaController {
 
-	private PessoaBean pessoaBean;
-
-	public PessoaController() {
-	}
-
-	public boolean insereNumeroTelefone(String numeroTelefone) {
+	public static boolean insereNumeroTelefone(String numeroTelefone) {
 		if (validaNumeroTelefone(numeroTelefone)) {
 			return true;
 		}
 		return false;
 	}
 
-	private boolean validaNumeroTelefone(String numeroTelefone) {
+	private static boolean validaNumeroTelefone(String numeroTelefone) {
+		
+		return numeroTelefone.matches(".((10)|([1-9][1-9]).)\\s9?[6-9][0-9]{3}-[0-9]{4}");
 		/*
 		// verifica se está vazio ou se é número público
 		if (numeroTelefone.length() == 0 || numeroTelefone.length() == 3) {
@@ -57,6 +54,5 @@ public class PessoaController {
 	  }
 	}
 	*/
-		return true;
 	}
 }

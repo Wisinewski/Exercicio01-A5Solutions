@@ -6,9 +6,9 @@ import br.com.a5.bean.PessoaJuridicaBean;
 
 public class PessoaJuridicaController {
 
-	private PessoaJuridicaBean pessoaJuridicaBean;
+	private static PessoaJuridicaBean pessoaJuridicaBean;
 	
-	public boolean insereCnpj(String cnpj) {
+	public static boolean insereCnpj(String cnpj) {
 		if(validaCnpj(cnpj)) {
 			pessoaJuridicaBean = new PessoaJuridicaBean(cnpj);
 			return true;
@@ -16,7 +16,7 @@ public class PessoaJuridicaController {
 		return false;
 	}
 
-	private boolean validaCnpj(String cnpj) {
+	private static boolean validaCnpj(String cnpj) {
 
 		// considera-se erro CNPJ's formados por uma sequencia de numeros iguais
 		if (cnpj.equals("00000000000000") || cnpj.equals("11111111111111") || cnpj.equals("22222222222222")

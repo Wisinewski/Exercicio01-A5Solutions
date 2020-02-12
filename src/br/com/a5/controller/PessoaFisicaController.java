@@ -7,11 +7,11 @@ import br.com.a5.model.PessoaFisicaModel;
 
 public class PessoaFisicaController {
 
-	private PessoaFisicaBean pessoaFisicaBean;
+	private static PessoaFisicaBean pessoaFisicaBean;
 	
 	private PessoaFisicaModel pessoaFisicaModel;
 	
-	public boolean insereCpf(String cpf) {
+	public static boolean insereCpf(String cpf) {
 		if(validaCpf(cpf)) {
 			pessoaFisicaBean = new PessoaFisicaBean(cpf);
 			return true;
@@ -19,7 +19,7 @@ public class PessoaFisicaController {
 		return false;
 	}
 
-	private boolean validaCpf(String cpf) {
+	private static boolean validaCpf(String cpf) {
 
 		if (cpf.equals("00000000000") || cpf.equals("11111111111") || cpf.equals("22222222222")
 			|| cpf.equals("33333333333") || cpf.equals("44444444444") || cpf.equals("55555555555")

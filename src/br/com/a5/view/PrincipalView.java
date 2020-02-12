@@ -6,28 +6,17 @@ import br.com.a5.controller.PessoaFisicaController;
 import br.com.a5.controller.PessoaJuridicaController;
 
 public class PrincipalView {
-	/*
-	public PessoaBean pessoaBean;
 	
-	public PrincipalView(PessoaBean pessoaBean) {
-		this.pessoaBean = pessoaBean;
-	}
-	*/
-
-	private PessoaController pessoaController = new PessoaController();
-	private PessoaFisicaController pessoaFisicaController = new PessoaFisicaController();
-	private PessoaJuridicaController pessoaJuridicaController = new PessoaJuridicaController();
-	
-	public boolean insereCpf(String cpf) {
-		return pessoaFisicaController.insereCpf(cpf);
+	public static boolean insereCpf(String cpf) {
+		return PessoaFisicaController.insereCpf(cpf);
 	}
 	
-	public boolean insereCnpj(String cnpj) {
-		return pessoaJuridicaController.insereCnpj(cnpj);
+	public static boolean insereCnpj(String cnpj) {
+		return PessoaJuridicaController.insereCnpj(cnpj);
 	}
 	
-	public boolean insereNumeroTelefone(String numeroTelefone) {
-		return pessoaController.insereNumeroTelefone(numeroTelefone);
+	public static boolean insereNumeroTelefone(String numeroTelefone) {
+		return PessoaController.insereNumeroTelefone(numeroTelefone);
 	}
 
 }

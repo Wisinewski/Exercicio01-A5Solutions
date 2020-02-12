@@ -33,7 +33,7 @@ public class HorarioUtil {
 		try {
 			Date horarioAbertura = sdf.parse(prop.getValor("horarioAbertura"));
 			Date horarioFechamento = sdf.parse(prop.getValor("horarioFechamento"));
-			System.out.println(horarioAbertura + " " + horarioFechamento);
+			
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
